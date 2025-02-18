@@ -11,5 +11,5 @@ This repo contains some solutions following <a href="https://www.frontendmentor.
 
 ## Live preview
 
-<a href="https://mathieu-310.github.io/">QR-CODE-COMPONENT</a>
+<a href="https://mathieu-310.github.io/">QR-CODE-COMPONENT</a> <br><br>
 <a href="https://frontend-mentor-projects-two-alpha.vercel.app/">BLOG PREVIEW CARD</a>
