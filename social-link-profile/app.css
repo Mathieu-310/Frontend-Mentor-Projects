@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colors */
+    --gren: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey--700: hsl(0, 0%, 20%);
+    --grey-800: hsl(0, 0%, 12%);
+    --grey-900: hsl(0, 0%, 8%);
+    /* weight */
+    --normal: 400;
+    --medium: 600;
+    --bold: 700;
+}
+
+body {
+    font-family: "Inter", serif;
+    background-color: var(--grey-900);
+    min-height: 100vh;
+    font-size: 14px;
+    align-content: center;
+    color: var(--white);
+}
+
+address {
+    color: var(--gren);
+}
+
+h1 {
+    font-size: 16px;
+}
+
+h2 {
+    font-size: 15px;
+    font-weight: var(--normal);
+}
+
+.profile-link a {
+    display: block;
+    text-decoration: none;
+    padding: 8px;
+    background-color: var(--grey--700);
+    border-radius: 8px;
+    margin-block: 15px;
+    text-align: center;
+    color: var(--white);
+    font-weight: var(--medium);
+    transition: 0.5s ease-in-out;
+}
+
+a:last-of-type {
+    margin-bottom: unset;
+}
+
+a:is(:focus, :hover) {
+    background-color: var(--gren);
+    color: var(--grey-900);
+    font-weight: var(--medium);
+}
+
+.profile-card {
+    margin-inline: auto;
+    max-width: 22rem;
+    background-color: var(--grey-800);
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.profile-author {
+    display: flex;
+    place-items: center;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+footer {
+    max-width: 22rem;
+    margin-inline: auto;
+    margin-top: 5vh;
+    background-color: var(--grey--700);
+    color: var(--white);
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.attribution p {
+    margin-block: 5px;
+}
+
+.attribution a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 2px;
+}
