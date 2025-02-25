@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* colors */
+    --primary-red: hsl(0, 78%, 62%);
+    --primary-cyan: hsl(180, 62%, 55%);
+    --primary-orange: hsl(34, 97%, 64%);
+    --priary-blue: hsl(212, 86%, 64%);
+    --grey-500: hsl(234, 12%, 34%);
+    --grey-400: hsl(212, 6%, 44%);
+    --white: hsl(0, 0%, 100%);
+    /* wieght */
+    --sm-weight: 200;
+    --mdm-weight: 400;
+    --lg-weight: 600;
+}
+
+body {
+    font-family: "Poppins", serif;
+    font-size: 15px;
+    color: var(--grey-400);
+    background-color: #e1e1e11a;
+    min-height: 100vh;
+    align-content: center;
+}
+
+strong {
+    color: #242424;
+    font-weight: var(--lg-weight);
+}
+
+h2 {
+    font-size: 1.75rem;
+    color: #242424;
+}
+
+.feature-container {
+    max-width: 60rem;
+    margin-inline: auto;
+}
+
+.feature-description {
+    display: grid;
+    margin-inline: auto;
+    max-width: 320px;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.feature-components {
+    display: grid;
+    grid-template-columns: 80%;
+    gap: 1rem;
+    justify-content: center;
+    max-width: 320px;
+    margin-inline: auto;
+}
+
+.shape {
+    display: grid;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 2px 3px 5px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    height: 15rem;
+}
+
+.warranty {
+    display: grid;
+    gap: 1rem;
+}
+
+.team {
+    border-top: 4px solid var(--primary-red);
+}
+
+.karma {
+    border-top: 4px solid var(--primary-orange);
+}
+
+.supervisor {
+    border-top: 4px solid var(--primary-cyan);
+}
+
+.calculator {
+    border-top: 4px solid var(--priary-blue);
+}
+
+.right-align {
+    justify-self: right;
+}
+
+footer {
+    text-align: center;
+    margin-top: 5%;
+
+    a {
+        text-decoration: none;
+        counter-reset: var(--priary-blue);
+    }
+}
+
+/* Large screens */
+
+@media screen and (min-width : 832px) {
+    .feature-components {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        max-width: 90%;
+    }
+
+    .feature-description {
+        max-width: 80%;
+        margin-inline: auto;
+        text-align: center;
+
+        small {
+            text-align: center;
+            max-width: 22rem;
+            font-size: 10px;
+            margin-inline: auto;
+        }
+    }
+
+    .supervisor,
+    .calculator {
+        margin-top: 7.5rem;
+    }
+}
