@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* colors */
+    --primary-purple-50: hsl(260, 100%, 95%);
+    --primary-purple-300: hsl(264, 82%, 80%);
+    --primary-purple-500: hsl(263, 55%, 52%);
+    --white: hsl(0, 0%, 100%);
+    --grey-100: hsl(214, 17%, 92%);
+    --grey-200: hsl(0, 0%, 81%);
+    --grey-400: hsl(224, 10%, 45%);
+    --grey-500: hsl(217, 19%, 35%);
+    --dark-blue: hsl(219, 29%, 14%);
+    --black: hsl(0, 0%, 7%);
+    /* weight */
+    --normal: 500;
+    --mediun: 600;
+}
+
+body {
+    background-color: var(--grey-100);
+    font-family: "Barlow Semi Condensed", serif;
+    font-size: 0.8125rem;
+    color: var(--black);
+    min-height: 100vh;
+    align-content: center;
+    padding: 2rem;
+}
+
+main {
+    min-height: 100vh;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card-container {
+    max-width: 30rem;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-inline: auto;
+}
+
+.card {
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card-author {
+    display: flex;
+    place-items: center;
+    gap: 10px;
+
+    /* Stand out author name👇 */
+    p {
+        font-weight: var(--mediun);
+    }
+}
+
+.card-author-experience {
+    font-size: 1rem;
+    font-weight: var(--mediun);
+    margin-block: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.8px;
+}
+
+/* Specific styles */
+
+.light-colored {
+    color: var(--white);
+
+    /* low saturation 👇 */
+    small,
+    blockquote {
+        color: var(--primary-purple-50)
+    }
+}
+
+
+.light-bg {
+    background-color: var(--white);
+
+    /* low saturation 👇 */
+    small,
+    blockquote {
+        color: var(--grey-400)
+    }
+
+}
+
+div.card:first-of-type {
+    background-color: var(--primary-purple-500);
+}
+
+div.card:nth-of-type(2) {
+    background-color: var(--grey-500);
+}
+
+div.card:nth-of-type(4) {
+    background-color: var(--dark-blue);
+}
+
+footer {
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        color: var(--primary-purple-500);
+    }
+}
+
+/* Large screens */
+
+@media screen and (min-width: 48rem) {
+    .card-container {
+        max-width: 61.25rem;
+        margin-inline: auto;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        place-items: unset;
+        row-gap: 1.5rem;
+    }
+
+    div.card:first-of-type {
+        background-image: url(assets/bg-pattern-quotation.svg);
+        background-position-x: 90%;
+        background-repeat: no-repeat;
+        background-position-y: top;
+    }
+
+    .Daniel {
+        grid-column: 1 / span 2;
+        grid-row: 1 / -3;
+    }
+
+    .Walters {
+        grid-column: 3;
+        grid-row: 1 /2;
+    }
+
+    .Harmon {
+        grid-column: 1;
+        grid-row: 2/ 3;
+    }
+
+    .Abrams {
+        grid-column: 2 / span 2;
+        grid-row: 2/3;
+    }
+
+    .Kira {
+        grid-column: 4;
+        grid-row: 1/3;
+    }
+}
